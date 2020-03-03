@@ -1,5 +1,5 @@
 <!--COMPLETA: extiende el layout -->
-@extends('layouts.app');
+@extends('layouts.app')
 <!--COMPLETA: empieza la sección -->
 @section('content')
 	<div class="container">
@@ -15,6 +15,7 @@
 					</div>
 
 					<div class="panel-body">
+						@include('common.errors')
 						<table class="table table-striped task-table">
 							<thead>
 								<th>Actividad</th>
