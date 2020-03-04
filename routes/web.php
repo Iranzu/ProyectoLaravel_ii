@@ -1,6 +1,7 @@
 <?php
-
 use App\Animal;
+use Illuminate\Http\Request;
+
 
 // Route::get('/', function () {
 //     $animales = Animal::all();
@@ -8,3 +9,6 @@ use App\Animal;
 // });
 
 Route::get('/', 'AnimalController@index');
+
+
+Route::post('/animal', 'AnimalController@adAnimal');

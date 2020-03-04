@@ -13,10 +13,10 @@ class CreateProyectoLaravelIiTable extends Migration
      */
     public function up()
     {
-        Schema::create('proyecto_laravel_ii', function (Blueprint $table) {
+        Schema::create('_proyecto_laravel_ii', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name');
-            $table->date('fecha');
+            $table->string('numChip');
+            $table->string('nombre');
             $table->timestamps();
         });
     }
