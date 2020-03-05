@@ -31,7 +31,7 @@ class AnimalController extends Controller
         $task->numChip = $request->numChip;
         $task->nombre = $request->nombre;
         $task->save();
-        return redirect('/');
+        return redirect('/')->withInput();
     }
 
     public function deleteAnimal(Request $request)

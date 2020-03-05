@@ -31,7 +31,7 @@
 		</div>
 
 		<!-- Actividades Actuales -->
-		@if (count($animales) > 0)
+		@if(count($animales) > 0)
 		<!--COMPLETA: Si el nº de actividades es >0 -->
 		<div class="panel panel-default">
 			<div class="panel-heading">
@@ -46,23 +46,23 @@
 						<th>Nombre</th>
 					</thead>
 					<tbody>
-						@foreach ($animales as $animal)
+						@foreach($animales as $animal)
 						<!--COMPLETA: recorre el array de actividades -->
 						<tr>
 							<td class="table-text">
-								<div>{{ $animal->numChip}}</div>
+								<div>{{$animal->numChip}}</div>
 							</td>
 							<td class="table-text">
-								<div>{{ $animal->nombre}}</div>
+								<div>{{$animal->nombre}}</div>
 							</td>
 							<td>
 								<form action="{{url('/animal/deleteanimal')}}" method="POST">
-								{{csrf_field()}}
-								<input type="hidden" name="id_animal" value="{{$animal->id}}">
-								<button type="submit" class="btn btn-danger">
-									<i class="fa fa-trash"></i>Borrar
-								</button>
-							</form>
+									{{csrf_field()}}
+									<input type="hidden" name="id_animal" value="{{$animal->id}}">
+									<button type="submit" class="btn btn-danger">
+										<i class="fa fa-trash"></i>Borrar
+									</button>
+								</form>
 							</td>
 						</tr>
 						@endforeach
