@@ -46,14 +46,23 @@
 						<th>Nombre</th>
 					</thead>
 					<tbody>
-						@foreach ($animales as $valor)
+						@foreach ($animales as $animal)
 						<!--COMPLETA: recorre el array de actividades -->
 						<tr>
 							<td class="table-text">
-								<div>{{ $valor->numChip}}</div>
+								<div>{{ $animal->numChip}}</div>
 							</td>
 							<td class="table-text">
-								<div>{{ $valor->nombre}}</div>
+								<div>{{ $animal->nombre}}</div>
+							</td>
+							<td>
+								<form action="{{url('/animal/deleteanimal')}}" method="POST">
+								{{csrf_field()}}
+								<input type="hidden" name="id_animal" value="{{$animal->id}}">
+								<button type="submit" class="btn btn-danger">
+									<i class="fa fa-trash"></i>Borrar
+								</button>
+							</form>
 							</td>
 						</tr>
 						@endforeach

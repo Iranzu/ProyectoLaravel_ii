@@ -33,4 +33,17 @@ class AnimalController extends Controller
         $task->save();
         return redirect('/');
     }
+
+    public function deleteAnimal(Request $request)
+    {
+        $rules = ['id_animal' => 'integer'];
+        $validator = Validator::make($request->only('id_animal'), $rules);
+        if($validator->fails()){
+            return redirect('/')->withErrors($validator);
+        }else{
+            if(Animal::where('id' , '=', $request->id_animal)->delete()){
+                return redirect('/');
+            }
+        }
+    }
 }
