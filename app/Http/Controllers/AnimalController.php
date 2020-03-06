@@ -18,7 +18,7 @@ class AnimalController extends Controller
     public function adAnimal(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'numChip' => 'required|max:9',
+            'numchip' => 'required|max:9',
             'nombre' => 'required'
         ]);
         if ($validator->fails()) {
@@ -27,10 +27,10 @@ class AnimalController extends Controller
                 ->withErrors($validator);
         }
         // crear la actividad...SE EXPLICA A CONTINUACIÓN
-        $task = new Animal;
-        $task->numChip = $request->numChip;
-        $task->nombre = $request->nombre;
-        $task->save();
+        $animal = new Animal;
+        $animal->numchip = $request->numchip;
+        $animal->nombre = $request->nombre;
+        $animal->save();
         return redirect('/')->withInput();
     }
 

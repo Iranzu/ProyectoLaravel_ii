@@ -16,12 +16,12 @@
 				<form action="{{url('/animal')}}" method="POST" class="form-horizontal">
 					{{csrf_field()}}
 					<div class="form-group">
-						<label for="numChip">NumChip: </label>
-						<input type="text" class="form-control" id="numChip">
+						<label for="numchip">NumChip: </label>
+						<input type="text" class="form-control" name="numchip" value="{{old('numchip')}}">
 					</div>
 					<div class="form-group">
 						<label for="nombre">Nombre: </label>
-						<input type="text" class="form-control" id="nombre">
+						<input type="text" class="form-control" name="nombre" value="{{old('nombre')}}">
 					</div>
 					<button type="submit" class="btn btn-primary">Añadir</button>
 				</form>
@@ -50,7 +50,7 @@
 						<!--COMPLETA: recorre el array de actividades -->
 						<tr>
 							<td class="table-text">
-								<div>{{$animal->numChip}}</div>
+								<div>{{$animal->numchip}}</div>
 							</td>
 							<td class="table-text">
 								<div>{{$animal->nombre}}</div>
