@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Animal extends Model
 {
     //
-    protected $table = 'Animales';
+    protected $table = '_proyecto_laravel_ii';
 }
