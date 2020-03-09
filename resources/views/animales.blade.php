@@ -53,7 +53,7 @@
 								<?php
 								$valores = ["Buena Salud", "Mala Salud"];
 								foreach ($valores as $clave => $val) {
-									echo "<option value='$clave'>$val</option>";
+									echo "<option value='$val'>$val</option>";
 								}
 								?>
 
@@ -62,7 +62,7 @@
 					</div>
 					<div class="form-group col-md-12 control-label">
 						<label for="descripcion">Descripcion: </label>
-						<textarea class="form-control" id="descripcion" name="descripcion" placeholder="Introduzca una breve descripción"></textarea>
+						<textarea class="form-control" id="descripcion" name="descripcion" placeholder="Introduzca una breve descripción" value="{{old('descripcion')}}"></textarea>
 					</div>
 					<button type="submit" class="btn btn-primary">Añadir</button>
 				</form>

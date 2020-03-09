@@ -17,10 +17,11 @@ class AnimalController extends Controller
 
     public function adAnimal(Request $request)
     {
+
         $validator = Validator::make($request->all(), [
-            'numchip' => 'required|max:9',
+            'numchip' => 'required|max:9|unique:_proyecto_laravel_ii',
             'nombre' => 'required',
-            'edad' => 'required|min:0',
+            'edad' => 'numeric|required|min:0',
             'genero' => 'required',
             'raza' => 'required',
             'salud' => 'required',
