@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,7 +19,7 @@
 		body {
 			font-family: 'Raleway';
 			margin-top: 25px;
-			background-color: hotpink;
+			background-color: lightpink;
 		}
 
 		button .fa {
@@ -28,37 +29,44 @@
 		.table-text div {
 			padding-top: 6px;
 		}
+
+		.form-horizontal .control-label {
+			text-align: left;
+		}
 	</style>
 
 	<script>
-		$(function () {
+		$(function() {
 			$('#task-name').focus();
 		});
 	</script>
 </head>
 
 <body>
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">
-            <img src="favicon.png" width="30" height="30" class="d-inline-block align-top" alt="icono">
-            Adóptame
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Navegación</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><span class="sr-only">Nuevo Animal</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#"><span class="sr-only">Animales Actuales</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+					<a class="navbar-brand" href="#">Lista de Animales</a>
+				</div>
+
+				<div id="navbar" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						&nbsp;
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 
 	@yield('content')
 </body>
+
 </html>

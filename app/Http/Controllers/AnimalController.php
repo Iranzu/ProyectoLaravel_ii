@@ -19,7 +19,12 @@ class AnimalController extends Controller
     {
         $validator = Validator::make($request->all(), [
             'numchip' => 'required|max:9',
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'edad' => 'required|min:0',
+            'genero' => 'required',
+            'raza' => 'required',
+            'salud' => 'required',
+            'descripcion' => 'required'
         ]);
         if ($validator->fails()) {
             return redirect('/')
@@ -30,6 +35,11 @@ class AnimalController extends Controller
         $animal = new Animal;
         $animal->numchip = $request->numchip;
         $animal->nombre = $request->nombre;
+        $animal->edad = $request->edad;
+        $animal->genero = $request->genero;
+        $animal->raza = $request->raza;
+        $animal->salud = $request->salud;
+        $animal->descripcion = $request->descripcion;
         $animal->save();
         return redirect('/')->withInput();
     }

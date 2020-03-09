@@ -17,7 +17,7 @@
 					{{csrf_field()}}
 					<div class="form-group col-md-12 control-label">
 						<label for="numchip">NumChip: </label>
-						<input type="text" class="form-control" name="numchip" value="{{old('numchip')}}">
+						<input type="number" class="form-control" name="numchip" value="{{old('numchip')}}">
 					</div>
 					<div class="form-group col-md-12 control-label">
 						<label for="nombre">Nombre: </label>
@@ -85,6 +85,11 @@
 					<thead>
 						<th>NumChip</th>
 						<th>Nombre</th>
+						<th>Edad</th>
+						<th>Genero</th>
+						<th>Raza</th>
+						<th>Salud</th>
+						<th>Descripcion</th>
 					</thead>
 					<tbody>
 						@foreach($animales as $animal)
@@ -95,6 +100,21 @@
 							</td>
 							<td class="table-text">
 								<div>{{$animal->nombre}}</div>
+							</td>
+							<td class="table-text">
+								<div>{{$animal->edad}}</div>
+							</td>
+							<td class="table-text">
+								<div>{{$animal->genero}}</div>
+							</td>
+							<td class="table-text">
+								<div>{{$animal->raza}}</div>
+							</td>
+							<td class="table-text">
+								<div>{{$animal->salud}}</div>
+							</td>
+							<td class="table-text">
+								<div>{{$animal->descripcion}}</div>
 							</td>
 							<td>
 								<form action="{{url('/animal/deleteanimal')}}" method="POST">

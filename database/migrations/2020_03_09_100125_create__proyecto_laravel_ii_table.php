@@ -15,8 +15,13 @@ class CreateProyectoLaravelIiTable extends Migration
     {
         Schema::create('_proyecto_laravel_ii', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('numchip');
+            $table->integer('numchip');
             $table->string('nombre');
+            $table->integer('edad');
+            $table->string('genero');
+            $table->string('raza');
+            $table->string('salud');
+            $table->string('descripcion');
             $table->timestamps();
         });
     }
