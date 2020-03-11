@@ -21,6 +21,7 @@ class AnimalController extends Controller
             'numchip.required' => 'El campo numchip es obligatorio',
             'numchip.max' => 'Numchip tiene que tener máximo 4 dígitos',
             'numchip.min' => 'Numchip tiene que tener minimo 4 dígitos',
+            'numchip.unique' => 'El NumChip ya existe',
             'nombre.required' => 'El campo nombre es obligatorio',
             'edad.required' => 'El campo edad es obligatorio',
             'edad.min' => 'La edad mínima es de :min años ',
@@ -31,7 +32,7 @@ class AnimalController extends Controller
         ];
 
         $validator = Validator::make($request->all(), [
-            'numchip' => 'required|max:4|min:4',
+            'numchip' => 'required|max:4|min:4|unique:_proyecto_laravel_ii',
             'nombre' => 'required',
             'edad' => 'required|numeric|min:0',
             'genero' => 'required',
