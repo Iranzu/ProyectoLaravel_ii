@@ -59,6 +59,8 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
+						<li><a href="#">Nuevo Animal</a></li>
+						<li><a href="#">Animales Actuales</a></li>
 						&nbsp;
 					</ul>
 				</div>
