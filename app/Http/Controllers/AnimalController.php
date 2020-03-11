@@ -17,13 +17,6 @@ class AnimalController extends Controller
 
     public function adAnimal(Request $request)
     {
-<<<<<<< HEAD
-
-        $validator = Validator::make($request->all(), [
-            'numchip' => 'required|max:9|unique:_proyecto_laravel_ii',
-            'nombre' => 'required',
-            'edad' => 'numeric|required|min:0',
-=======
         $messages = [
             'numchip.required' => 'El campo numchip es obligatorio',
             'numchip.max' => 'Numchip tiene que tener máximo 4 dígitos',
@@ -41,7 +34,6 @@ class AnimalController extends Controller
             'numchip' => 'required|max:4|min:4',
             'nombre' => 'required',
             'edad' => 'required|numeric|min:0',
->>>>>>> 29ba619c5cbbdbb2d563de0a643bf829c169ec97
             'genero' => 'required',
             'raza' => 'required',
             'salud' => 'required',
