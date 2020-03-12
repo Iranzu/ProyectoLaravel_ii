@@ -1,7 +1,7 @@
 @if (count($errors) > 0)
 	<!-- Mostrar la lista de errores  -->
 	<div class="alert alert-danger">
-		<strong>¡¡Ha habido errores!!</strong>
+		<strong>¡ERROR!</strong>
 
 		<br><br>
 

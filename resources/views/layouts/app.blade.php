@@ -33,6 +33,8 @@
 		.form-horizontal .control-label {
 			text-align: left;
 		}
+
+		
 	</style>
 
 	<script>
@@ -59,8 +61,8 @@
 
 				<div id="navbar" class="navbar-collapse collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="#">Nuevo Animal</a></li>
-						<li><a href="#">Animales Actuales</a></li>
+						<li><a href="#nuevo">Nuevo Animal</a></li>
+						<li><a href="#actuales">Animales Actuales</a></li>
 						&nbsp;
 					</ul>
 				</div>
